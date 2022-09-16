@@ -12,12 +12,13 @@ Console.Write("Введите второе целое число ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 if(number1 > number2)
 {
-    Console.Write($"Число {number1} большее, а число {number2} меньшее ");
+    Console.Write($"max = {number1} ");
 }
 else if(number1 < number2)
 {
-    Console.Write($"Число {number1} меньшее, а число {number2} большее ");
+    Console.Write($"max = {number2} ");
 }
-else{
+else
+{
     Console.Write("Числа равны ");
 }

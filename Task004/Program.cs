@@ -6,11 +6,11 @@
 44 5 78 -> 78
 22 3 9 -> 22
 */
-Console.Write("Введите первое число ");
+Console.Write("Введите первое целое число ");
 int number1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите второе число ");
+Console.Write("Введите второе целое число ");
 int number2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите третье число ");
+Console.Write("Введите третье целое число ");
 int number3 = Convert.ToInt32(Console.ReadLine());
 
 int max = number1;
@@ -23,4 +23,4 @@ if(number2 < number3 && number1 < number3)
     max = number3;
 }
 
-Console.Write($"Максимальное число из введенных = {max}");
+Console.Write($"Максимальное число = {max}");
