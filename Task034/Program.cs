@@ -12,6 +12,7 @@ int[] CreateArrayRndInt(int size, int min, int max)
     {
         array[i] = rnd.Next(min, max + 1);
     }
+    
     return array;
 }
 
@@ -29,14 +30,18 @@ void PrintArray(int[] array)
 int numberOfEvenElem(int[] array)
 {
     int sum = default;
+
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] % 2 == 0) sum++;
     }
+
     return sum;
 }
 
 int[] arr = CreateArrayRndInt(10, 100, 999);
+
 PrintArray(arr);
+
 int result = numberOfEvenElem(arr);
 Console.WriteLine($"Количество четных чисел = {result}");
