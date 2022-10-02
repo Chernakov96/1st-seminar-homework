@@ -32,6 +32,7 @@ double FindDiffArrayMinMax(double[] array)
 {
     double min = array[0];
     double max = array[0];
+
     for (int i = 0; i < array.Length; i++)
     {
         if (max < array[i]) max = array[i];
@@ -41,12 +42,14 @@ double FindDiffArrayMinMax(double[] array)
     {
         if (array[i] < min) min = array[i];
     }
+
     double diff = max - min;
     double diffRound = Math.Round(diff, 1, MidpointRounding.ToZero);
+    
     return diffRound;
 }
 
-double[] arr = CreateArrayRndDouble(5, 0, 99);
+double[] arr = CreateArrayRndDouble(5, 0.1, 99.9);
 
 PrintArrayDouble(arr);
 
