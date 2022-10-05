@@ -7,16 +7,26 @@
 
 Console.WriteLine("Введите произвольное количество чисел через запятую(после каждой запятой нужен пробел) ");
 string numbers = Console.ReadLine();
-string deleteCommas = numbers.Replace(",", "");
-int[] numbersToArray = deleteCommas.Split(' ').Select(int.Parse).ToArray();
-PrintArray(numbersToArray);
-int result = PositiveNumbers(numbersToArray);
+
+int[] array = ConvertStringOfNumbersToArray(numbers);
+PrintArray(array);
+
+int result = PositiveNumbers(array);
 Console.WriteLine($"Количество чисел больше нуля равно {result}");
+
+int[] ConvertStringOfNumbersToArray(string input)
+{
+    string deleteCommas = input.Replace(",", "");
+    int[] numbersToArray = deleteCommas.Split(' ').Select(int.Parse).ToArray();
+    
+    return numbersToArray;
+}
 
 int PositiveNumbers(int[] array)
 {
     int sumOfPositives = default;
     for (int i = 0; i < array.Length; i++) if(array[i] > 0) sumOfPositives++;
+
     return sumOfPositives;
 }
 
