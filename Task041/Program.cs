@@ -4,3 +4,29 @@
 // Пример:
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
+
+Console.WriteLine("Введите произвольное количество чисел через запятую(после каждой запятой нужен пробел) ");
+string numbers = Console.ReadLine();
+string deleteCommas = numbers.Replace(",", "");
+int[] numbersToArray = deleteCommas.Split(' ').Select(int.Parse).ToArray();
+PrintArray(numbersToArray);
+int result = PositiveNumbers(numbersToArray);
+Console.WriteLine(result);
+
+int PositiveNumbers(int[] array)
+{
+    int sumOfPostives = default;
+    for (int i = 0; i < array.Length; i++) if(array[i] > 0) sumOfPostives++;
+    return sumOfPostives;
+}
+
+void PrintArray(int[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}");
+    }
+    Console.WriteLine("]");
+}
