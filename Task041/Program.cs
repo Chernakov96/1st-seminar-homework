@@ -11,7 +11,7 @@ string deleteCommas = numbers.Replace(",", "");
 int[] numbersToArray = deleteCommas.Split(' ').Select(int.Parse).ToArray();
 PrintArray(numbersToArray);
 int result = PositiveNumbers(numbersToArray);
-Console.WriteLine(result);
+Console.WriteLine($"Количество чисел больше нуля равно {result}");
 
 int PositiveNumbers(int[] array)
 {
