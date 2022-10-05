@@ -15,9 +15,9 @@ Console.WriteLine(result);
 
 int PositiveNumbers(int[] array)
 {
-    int sumOfPostives = default;
-    for (int i = 0; i < array.Length; i++) if(array[i] > 0) sumOfPostives++;
-    return sumOfPostives;
+    int sumOfPositives = default;
+    for (int i = 0; i < array.Length; i++) if(array[i] > 0) sumOfPositives++;
+    return sumOfPositives;
 }
 
 void PrintArray(int[] array)
