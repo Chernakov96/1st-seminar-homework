@@ -58,4 +58,4 @@ int column = Convert.ToInt32(Console.ReadLine());
 
 int[,] array2d = CreateMatrixRndInt(5, 5, 1, 100);
 PrintMatrix(array2d);
-FindElementValue(array2d, row, column);
+FindElementValue(array2d, row-1, column-1); // -1 нужен, чтобы пользователь не считал от 0, а с единицы
